@@ -47,6 +47,7 @@ public class Timer : MonoBehaviour {
 
     public void StopTimer()
     {
+        timeRemaining = 0;
         displayText.text = Mathf.CeilToInt(timeRemaining).ToString();
     }
     //Is the timer currently running

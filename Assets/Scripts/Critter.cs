@@ -8,6 +8,7 @@ public class Critter : MonoBehaviour {
     public Vector2 upperRange;
 
     public Score ScoreDisplay;
+    public Timer timer;
 
     public int pointValue = 1; //How much this critter is worth
 
@@ -20,7 +21,10 @@ public class Critter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (timer.IsTimerRunning() == false)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     // Unity calls this when the gameobject is clicked
